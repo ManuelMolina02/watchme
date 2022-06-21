@@ -1,5 +1,5 @@
 import { memo, useState } from 'react'
-import { Star, Clock, ChevronsUp } from 'react-feather';
+import { Star, Clock, PlayCircle } from 'react-feather';
 
 import '../styles/movie-modal.scss';
 
@@ -40,7 +40,7 @@ function MovieModalComponent({ movie, setOpenModal }: MovieModalProps) {
           alt={movie.Title}
         />
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', justifyContent: 'space-around', width: '100%', height: '80%', margin: '0 40px' }}>
+        <div className='modal-content'>
           <h2>{movie.Title}</h2>
 
           <div>
@@ -51,15 +51,18 @@ function MovieModalComponent({ movie, setOpenModal }: MovieModalProps) {
 
             <div>
               <Clock />
-              {movie.Runtime}
+              <span>{movie.Runtime}</span>
             </div>
           </div>
 
-          <span>asdasd
-            asasasd adsas sa asssd asdas asd asas asdas asd asdas dasdas as dasd asdas asda asd asas asddsaadssda sad asd sadsaas saas asdasdas sa sads asddsa asas asd adassadds aads asd ads
-          </span>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.
+          </p>
 
-          <button>assistir</button>
+          <button onClick={() => alert('Opss! Isso ainda é apenas uma demonstração.')}>
+            <PlayCircle />
+            <span>Assistir</span>
+          </button>
         </div>
 
       </div>

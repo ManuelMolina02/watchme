@@ -5,13 +5,14 @@
   &:hover {
     > div {
       height: 46%;
-      transition: all 0.5s ease-in;
+      transition: height 0.5s ease-in;
     }
 
     .viewMore {
       width: 40px;
       height: 40px;
       z-index: 10;
+      transition: all .75s linear;
 
       margin-bottom: 20px;
     }
@@ -34,7 +35,7 @@
     justify-content: center;
 
     height: 30%;
-    transition: all 0.5s ease-out;
+    transition: height 0.5s ease-out;
     overflow: hidden;
 
     background: rgba(11, 11, 12, 0.8);
@@ -42,7 +43,7 @@
     .viewMore {
       position: absolute;
       bottom: 0;
-      transition: all .5s linear;
+      transition: all .2s linear;
       z-index: -10;
     }
 
