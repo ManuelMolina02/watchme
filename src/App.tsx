@@ -25,6 +25,7 @@ interface MovieProps {
   imdbID: string;
   Title: string;
   Poster: string;
+  Plot: string;
   Ratings: Array<{
     Source: string;
     Value: string;

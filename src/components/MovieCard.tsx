@@ -8,6 +8,9 @@ interface MovieCardProps {
   movie: {
     Title: string;
     Poster: string;
+    Plot: string;
+    Actors: string;
+    Director: string;
     Ratings: Array<{
       Source: string;
       Value: string;
@@ -20,14 +23,13 @@ interface MovieCardProps {
 function MovieCardComponent({ movie }: MovieCardProps) {
   const [openModal, setOpenModal] = useState(false);
 
-  function test() {
-    console.log('cliquei no card', movie.Title);
+  function showModal() {
     setOpenModal(true);
   }
 
   return (
     <>
-      <div className="movie-card" onClick={() => test()}>
+      <div className="movie-card" onClick={() => showModal()}>
         <img
           src={movie.Poster}
           alt={movie.Title}
@@ -40,11 +42,6 @@ function MovieCardComponent({ movie }: MovieCardProps) {
               <div>
                 <Star />
                 <span>{movie.Ratings[0].Value}</span>
-              </div>
-
-              <div>
-                <Clock />
-                {movie.Runtime}
               </div>
             </div>
           </div>

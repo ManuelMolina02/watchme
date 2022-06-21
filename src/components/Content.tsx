@@ -5,6 +5,9 @@ type moviesProps = {
   imdbID: string;
   Title: string;
   Poster: string;
+  Plot: string;
+  Actors: string;
+  Director: string;
   Ratings: Array<{
     Source: string;
     Value: string;
