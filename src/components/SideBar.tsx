@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { Button } from "./Button";
 
 
@@ -45,5 +45,5 @@ function SideBarComponent({ buttonActive, genres, genreSelectedId }: SidebarProp
 }
 
 export const SideBar = memo(SideBarComponent, (prevProps, nextProps) => {
-  return Object.is(prevProps.genres, nextProps.genres);
+  return prevProps.buttonActive !== nextProps.buttonActive && Object.is(prevProps.genres, nextProps.genres);
 });
